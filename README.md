@@ -126,4 +126,8 @@ I also added proof notes explaining the parts I reviewed:
 - invalid market refunds
 - pull-based payout logic
 
+I removed the unused Counter test because it was not related to the RitualPredict contract, And added a new one instead of it.
+
 I kept the changes focused on understanding and presenting the workshop flow, since the public chain was not available for live deployment.
+
+
