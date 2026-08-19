@@ -30,3 +30,7 @@ I reviewed the workshop repo and followed the main flow of the prediction market
 ## What I added in this fork
 
 I added a small frontend mockup under the `web/` folder to show how the Ritual Predict market flow could look from a user interface perspective. It is intentionally simple and static, but it follows the same contract flow from the workshop: create market, bet, scheduled resolution, and claim/refund.
+
+RADICAL_SS
+
+
