@@ -106,3 +106,24 @@ betting model is plain pari-mutuel: two running totals and one mapping per side.
 - Ritual Chain docs — <https://docs.ritualfoundation.org>
 - dApp skills — <https://github.com/ritual-foundation/ritual-dapp-skills>
 - Explorer — <https://explorer.ritualfoundation.org> · Faucet — <https://faucet.ritualfoundation.org>
+
+---
+
+## My Bootcamp 2 Changes
+
+In this fork I reviewed the Ritual Predict workshop project and added a small static frontend mockup under the `web/` folder.
+
+The frontend is not a live deployment. It is a simple UI demo that represents the main flow of the self-resolving prediction market:
+
+createMarket → bet YES/NO → Scheduler callback → HTTP precompile → jq extraction → resolve or refund
+
+I also added proof notes explaining the parts I reviewed:
+
+- block-based market deadlines
+- scheduled resolution
+- HTTP and jq precompile usage
+- retry handling for failed oracle reads
+- invalid market refunds
+- pull-based payout logic
+
+I kept the changes focused on understanding and presenting the workshop flow, since the public chain was not available for live deployment.
