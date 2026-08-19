@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ritual Predict — Workshop Demo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Bootcamp 2 Fork</p>
+      <h1>Ritual Predict</h1>
+      <p class="subtitle">
+        A simple frontend mockup for the self-resolving prediction market built in the Ritual Chain workshop.
+      </p>
+    </section>
+
+    <section class="flow-card">
+      <h2>Market Flow</h2>
+      <div class="flow">
+        <span>Create Market</span>
+        <span>Bet YES / NO</span>
+        <span>Scheduler Callback</span>
+        <span>HTTP + jq</span>
+        <span>Resolve or Refund</span>
+      </div>
+    </section>
+
+    <section class="market-card">
+      <div class="market-header">
+        <div>
+          <p class="label">Demo Market</p>
+          <h2 id="question">Will ETH/USD be at least $4,000 at resolution?</h2>
+        </div>
+        <span id="state" class="state open">Open</span>
+      </div>
+
+      <div class="stats">
+        <div>
+          <p>YES Pool</p>
+          <strong id="yesPool">12.5 RITUAL</strong>
+        </div>
+        <div>
+          <p>NO Pool</p>
+          <strong id="noPool">8.2 RITUAL</strong>
+        </div>
+        <div>
+          <p>Target</p>
+          <strong id="target">$4,000</strong>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="betYes">Bet YES</button>
+        <button id="betNo" class="secondary">Bet NO</button>
+        <button id="resolve" class="ghost">Simulate Resolve</button>
+      </div>
+
+      <p id="statusText" class="status-text">
+        Waiting for users to place bets. In the real contract, Ritual Scheduler resolves the market at the resolve block.
+      </p>
+    </section>
+
+    <section class="notes">
+      <h2>Workshop Notes</h2>
+      <ul>
+        <li>Resolution is scheduled by block number, not by timestamp.</li>
+        <li>HTTP precompile reads the oracle URL.</li>
+        <li>jq precompile extracts the value from the response.</li>
+        <li>Failed oracle reads should not be counted as NO.</li>
+        <li>Winners claim payouts with a pull-based model.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
