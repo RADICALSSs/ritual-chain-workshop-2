@@ -1,0 +1,6 @@
+{
+  "appName": "Ritual Predict",
+  "network": "Ritual Chain",
+  "contractAddress": "0x0000000000000000000000000000000000000000",
+  "notes": "Replace contractAddress after deployment. This workshop fork only includes a static frontend mockup because public chain deployment was not required for the submission."
+}
